@@ -80,12 +80,12 @@ for name, size in [('Title', 24), ('Heading 1', 17), ('Heading 2', 14), ('Headin
     styles[name].font.name = 'Microsoft YaHei'; styles[name]._element.rPr.rFonts.set(qn('w:eastAsia'), 'Microsoft YaHei'); styles[name].font.size = Pt(size); styles[name].font.color.rgb = RGBColor(0,0,0)
 
 p = doc.add_paragraph(style='Title'); p.alignment = WD_ALIGN_PARAGRAPH.CENTER; p.add_run('WJ DSRC Protocol Test Desk 操作说明')
-p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER; p.add_run('适用版本 WJ_DSRCProtocolTest_Desk_Net_20260920').bold = True
+p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER; p.add_run('适用版本 WJ_ComprehensiveTest_Desk_20260922').bold = True
 p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER; p.add_run('文档范围：当前工程已实现的 DSRC 测试界面、台发设置、透传操作和测试结果展示')
 doc.add_page_break()
 
 doc.add_heading('1 使用范围与启动', level=1)
-doc.add_paragraph('本说明面向使用 WJ_DSRCProtocolTest_Desk_Net_20260920.exe 进行 DSRC 协议测试的人员。程序当前提供三个一级产品 Tab，其中 DSRC 页面沿用现有测试界面和逻辑；OBU 串口和发卡页面为同级预留页面，当前仅显示后续添加提示。')
+doc.add_paragraph('本说明面向使用 WJ_ComprehensiveTest_Desk_20260922.exe 进行 DSRC 协议测试的人员。程序当前提供三个一级产品 Tab，其中 DSRC 页面沿用现有测试界面和逻辑；OBU 串口和发卡页面为同级预留页面，当前仅显示后续添加提示。')
 doc.add_paragraph('启动后先确认串口、台发设备和待测 OBU 已连接。未完成端口打开和初始化台发前，不应执行发送或测试按钮。')
 
 doc.add_heading('2 一级产品 Tab', level=1)

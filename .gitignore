@@ -32,5 +32,5 @@
 **/.backups/
 
 # Keep controlled runtime inputs even when a broader rule is added later.
-!WJ_DSRCProtocolTest_Desk_Net/WJ_DSRCProtocolTest_Desk_Net_20260920/Native/*.dll
-!WJ_DSRCProtocolTest_Desk_Net/WJ_DSRCProtocolTest_Desk_Net_20260920/*.ini
+!WJ_DSRCProtocolTest_Desk_Net/WJ_ComprehensiveTest_Desk_20260922/Native/*.dll
+!WJ_DSRCProtocolTest_Desk_Net/WJ_ComprehensiveTest_Desk_20260922/*.ini

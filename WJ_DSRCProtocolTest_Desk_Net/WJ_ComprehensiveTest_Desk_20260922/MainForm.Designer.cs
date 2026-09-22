@@ -926,7 +926,7 @@ namespace WJ_DSRCProtocolTest_Desk_Net
             this.MinimumSize = new System.Drawing.Size(1080, 720);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "WJ_DSRCProtocolTest_Desk_Net_20260920";
+            this.Text = "WJ_ComprehensiveTest_Desk_20260922";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tableLayoutRoot.ResumeLayout(false);

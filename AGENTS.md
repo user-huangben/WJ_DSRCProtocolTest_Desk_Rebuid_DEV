@@ -2,18 +2,37 @@
 
 ## 项目描述
 
-`WJ_DSRCProtocolTest_Desk_Rebuid`：独立 C#/.NET Framework 4.8 WinForms DSRC 上位机。
+`WJ_DSRCProtocolTest_Desk_Rebuid`：独立 DSRC 协议测试上位机。
 
-### 工程入口
+### 技术栈
 
-- 解决方案：`WJ_DSRCProtocolTest_Desk_Net/WJ_DSRCProtocolTest_Desk_Net_20260920.sln`，平台 **x86**。
-- 源码：`WJ_DSRCProtocolTest_Desk_Net/WJ_DSRCProtocolTest_Desk_Net_20260920/`；程序集 `WJ_DSRCProtocolTest_Desk_Net_20260920`。
+- 语言与 UI：C#、WinForms。
+- 运行时：.NET Framework 4.8。
+- 平台：x86（加载 32 位设备 DLL）。
+- 程序集：`WJ_ComprehensiveTest_Desk_20260922`。
 
-### 工程架构
+### 目录与分层
 
-- 入口 `MainForm`。测试窗体：`WanjiStandardTestForm`（`WanjiStandardTestCaseHandlers`）、`BeijingLocalStandardTestForm`、`WanjiCpcStandardTestForm`、`WatchmanBroadcastTestForm`、`TestCaseLogicForm`；布局控件 `Controls/TransparentTestControl`。
-- 服务：`DesktopCommService`、`LaneTransactionService`、`SoftTradeCryptoService`、`LegacyLaneDllService`、`OneChipIssueActivationService`、`BeijingRespondBroadcastService`、`BeijingRespondDifferentMacService`；结果 `TestResultFileWriter` / `TestResultScreenshotWriter`。
-- P/Invoke：`Native/DesktopCommNativeMethods.cs`、`Native/LegacyLaneNativeMethods.cs`。受控 DLL：`DeskTopComm.dll`、`mwCardReader.dll`、`wdcrwv.dll`、`gmssl.dll`。受控 INI：`SetMe.ini`、`BST_Locked.ini`、`BST_Locked_Sutong.ini`。
+- 解决方案：`WJ_DSRCProtocolTest_Desk_Net/WJ_ComprehensiveTest_Desk_20260922.sln`。
+- 源码目录：`WJ_DSRCProtocolTest_Desk_Net/WJ_ComprehensiveTest_Desk_20260922/`。
+- 入口窗体：`MainForm`。
+- 测试窗体：`WanjiStandardTestForm`（`WanjiStandardTestCaseHandlers`）、`BeijingLocalStandardTestForm`、`WanjiCpcStandardTestForm`、`WatchmanBroadcastTestForm`、`TestCaseLogicForm`；布局控件 `Controls/TransparentTestControl`。
+- 服务：`DesktopCommService`、`LaneTransactionService`、`SoftTradeCryptoService`、`LegacyLaneDllService`、`OneChipIssueActivationService`、`BeijingRespondBroadcastService`、`BeijingRespondDifferentMacService`、`BeijingTypicalTransactionService`；结果 `TestResultFileWriter` / `TestResultScreenshotWriter`。
+- P/Invoke：`Native/DesktopCommNativeMethods.cs`、`Native/LegacyLaneNativeMethods.cs`。
+- 受控 DLL：`DeskTopComm.dll`、`mwCardReader.dll`、`wdcrwv.dll`、`gmssl.dll`。
+- 受控 INI：`SetMe.ini`、`BST_Locked.ini`、`BST_Locked_Sutong.ini`。
+
+### 构建与验证
+
+- 常规配置：`Debug|x86`。
+- 另有 `Release|x86`。
+- 默认输出：项目下 `bin/Debug/`、`bin/Release/`。
+
+### 代码约定
+
+- 窗体后置：校验、UI 状态、调用服务。
+- 协议、设备 DLL、结果文件：`Services/`。
+- P/Invoke：`Native/`。
 
 ## 项目边界
 
