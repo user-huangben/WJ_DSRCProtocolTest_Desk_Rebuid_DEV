@@ -1,0 +1,29 @@
+---
+description: 现行 C# WinForms 工程的界面分层、测试执行、文件编码和 DSRC 判定规范
+globs: WJ_DSRCProtocolTest_Desk_Net/WJ_DSRCProtocolTest_Desk_Net_20260920/**/*.cs,WJ_DSRCProtocolTest_Desk_Net/WJ_DSRCProtocolTest_Desk_Net_20260920/**/*.resx,WJ_DSRCProtocolTest_Desk_Net/WJ_DSRCProtocolTest_Desk_Net_20260920/**/*.csproj,WJ_DSRCProtocolTest_Desk_Net/WJ_DSRCProtocolTest_Desk_Net_20260920/**/*.config,WJ_DSRCProtocolTest_Desk_Net/WJ_DSRCProtocolTest_Desk_Net_20260920/**/*.ini
+alwaysApply: false
+---
+
+# C# WinForms DSRC 开发规范
+
+## 界面分层与事件
+
+- 布局与事件绑定只在 `*.Designer.cs` 的 `InitializeComponent`。后置文件：校验、UI 状态、调用服务。协议/DLL/结果文件只进 `Services/`；P/Invoke 只进 `Native/`。
+- 交互控件：Designer 加控件 → 显式绑定 `buttonName_Click` 这类标准名 → 后置写处理函数 → 调服务 → 设计器双击确认跳到已有事件。禁止反射、`Application.Idle`、Load 后 Lambda 隐式绑事件。
+- 新方法/P/Invoke 写 XML 注释（参数、返回、句柄、超时、线程）；未知标待确认。调服务或 DLL 前加一行说明该入口作用。
+
+## 测试执行与结果
+
+- 根布局 `TableLayoutPanel`。树：分组 → 子项 → 叶子；父勾选递归；按显示顺序跑已勾选叶子；无选择不发设备通信。
+- 开始：禁用测试、启用停止、统一取消令牌。双击只出说明。清空只清日志。
+- 界面：摘要/步骤/进度/失败原因/结论/结果路径。完整帧与返回码进结果文件。单叶子截图；批量只在全部结束后汇总截图。
+
+## 文件与编码保护
+
+- 改历史 `.cs` / `.resx` / 项目文件保持原编码与 BOM。乱码或 eSafeNet 头用 `rg -a` 复核。非必要不手改 `.resx`。不把 `.backups/` 盖回现行文件。
+
+## DSRC 记录与判定
+
+- 先存完整下行/回复/DLL 码/时间再解析。区分 DLL 成功、收到回复、APDU `90 00`、整例通过。多 APDU 按边界切，长度字节不当正文。
+- LLC/MACID/BID/UnixTime/序号/算法按该用例配置，不跨用例套用。非 `90 00`（如 `93 02`）在测试信息区写清期望/实际和完整异常帧。
+- `EventReport` 只发、只记发送返回码；不收、不造响应。无后续会话时以此结束空口流程。

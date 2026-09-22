@@ -1,0 +1,36 @@
+# Visual Studio local state
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build outputs and intermediate files
+**/bin/
+**/obj/
+**/obj.backup-*/
+**/.verification/
+**/.verification-*/
+
+# Runtime diagnostics and transient test artifacts
+**/DLL_log_*.txt
+**/TestResults/
+**/TestScreenshots/
+**/TestScreenshots.rar
+*.log
+
+# Codex local diagnostics
+.codex-log/
+
+# Temporary and editor files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Historical snapshots; Git history is the comparison source
+**/.backups/
+
+# Keep controlled runtime inputs even when a broader rule is added later.
+!WJ_DSRCProtocolTest_Desk_Net/WJ_DSRCProtocolTest_Desk_Net_20260920/Native/*.dll
+!WJ_DSRCProtocolTest_Desk_Net/WJ_DSRCProtocolTest_Desk_Net_20260920/*.ini
