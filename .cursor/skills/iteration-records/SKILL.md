@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 ## 适用范围
 
-记录文件必须与 `.sln` 同级（当前为 `WJ_DSRCProtocolTest_Desk_Net/迭代记录.md`），不得写入 `bin`、`obj` 或运行输出目录。
+记录文件必须与 `.sln` 同级（当前为 `WJ_ComprehensiveTest_Desk_20260922/迭代记录.md`），不得写入 `bin`、`obj` 或运行输出目录。
 
 ### 触发与边界
 
@@ -20,7 +20,7 @@ disable-model-invocation: true
 
 ## 输入与前置检查
 
-1. 定位 `WJ_DSRCProtocolTest_Desk_Net/WJ_ComprehensiveTest_Desk_20260922.sln`，记录写在其同级目录。
+1. 定位 `WJ_ComprehensiveTest_Desk_20260922/WJ_ComprehensiveTest_Desk_20260922.sln`，记录写在其同级目录。
 2. 读取项目名称、程序集 `WJ_ComprehensiveTest_Desk_20260922`、目标框架、平台、版本后缀和日期。
 3. 汇总变更文件、功能变化、协议/界面影响、验证命令和结果。
 4. 区分「已实现」「待确认」「未执行实机验证」「后续计划」。

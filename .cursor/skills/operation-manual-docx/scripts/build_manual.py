@@ -10,7 +10,7 @@ from docx.oxml.ns import qn
 
 # 工具脚本位于 .cursor/skills/operation-manual-docx/scripts/；生成物仍写入解决方案目录。
 WORKSPACE = Path(__file__).resolve().parents[4]
-ROOT = WORKSPACE / 'WJ_DSRCProtocolTest_Desk_Net'
+ROOT = WORKSPACE / 'WJ_ComprehensiveTest_Desk_20260922'
 OUT = ROOT / '操作说明.docx'
 ART = ROOT / 'artifacts' / 'manual'
 SRC = ART / 'mainform.png'
