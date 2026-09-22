@@ -1,6 +1,6 @@
 ---
 description: 现行 C# WinForms 工程的界面分层、测试执行、文件编码和 DSRC 判定规范
-globs: WJ_ComprehensiveTest_Desk_20260922/WJ_ComprehensiveTest_Desk_20260922/**/*.cs,WJ_ComprehensiveTest_Desk_20260922/WJ_ComprehensiveTest_Desk_20260922/**/*.resx,WJ_ComprehensiveTest_Desk_20260922/WJ_ComprehensiveTest_Desk_20260922/**/*.csproj,WJ_ComprehensiveTest_Desk_20260922/WJ_ComprehensiveTest_Desk_20260922/**/*.config,WJ_ComprehensiveTest_Desk_20260922/WJ_ComprehensiveTest_Desk_20260922/**/*.ini
+globs: WJ_ComprehensiveTest_Desk/WJ_ComprehensiveTest_Desk/**/*.cs,WJ_ComprehensiveTest_Desk/WJ_ComprehensiveTest_Desk/**/*.resx,WJ_ComprehensiveTest_Desk/WJ_ComprehensiveTest_Desk/**/*.csproj,WJ_ComprehensiveTest_Desk/WJ_ComprehensiveTest_Desk/**/*.config,WJ_ComprehensiveTest_Desk/WJ_ComprehensiveTest_Desk/**/*.ini
 alwaysApply: false
 ---
 

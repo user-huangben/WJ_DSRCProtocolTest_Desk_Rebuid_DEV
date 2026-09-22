@@ -2,19 +2,19 @@
 
 ## 项目描述
 
-`WJ_ComprehensiveTest_Desk_20260922`：OBU综合测试上位机
+`WJ_ComprehensiveTest_Desk`：独立 DSRC 协议测试上位机。
 
 ### 技术栈
 
 - 语言与 UI：C#、WinForms。
 - 运行时：.NET Framework 4.8。
 - 平台：x86（加载 32 位设备 DLL）。
-- 程序集：`WJ_ComprehensiveTest_Desk_20260922`。
+- 程序集：`WJ_ComprehensiveTest_Desk_20260922`（生成 `WJ_ComprehensiveTest_Desk_20260922.exe`）。
 
 ### 目录与分层
 
-- 解决方案：`WJ_ComprehensiveTest_Desk_20260922/WJ_ComprehensiveTest_Desk_20260922.sln`。
-- 源码目录：`WJ_ComprehensiveTest_Desk_20260922/WJ_ComprehensiveTest_Desk_20260922/`。
+- 解决方案：`WJ_ComprehensiveTest_Desk/WJ_ComprehensiveTest_Desk.sln`。
+- 源码目录：`WJ_ComprehensiveTest_Desk/WJ_ComprehensiveTest_Desk/`。
 - 入口窗体：`MainForm`。
 - 测试窗体：`WanjiStandardTestForm`（`WanjiStandardTestCaseHandlers`）、`BeijingLocalStandardTestForm`、`WanjiCpcStandardTestForm`、`WatchmanBroadcastTestForm`、`TestCaseLogicForm`；布局控件 `Controls/TransparentTestControl`。
 - 服务：`DesktopCommService`、`LaneTransactionService`、`SoftTradeCryptoService`、`LegacyLaneDllService`、`OneChipIssueActivationService`、`BeijingRespondBroadcastService`、`BeijingRespondDifferentMacService`、`BeijingTypicalTransactionService`；结果 `TestResultFileWriter` / `TestResultScreenshotWriter`。

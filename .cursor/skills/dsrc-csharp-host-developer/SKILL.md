@@ -1,6 +1,6 @@
 ---
 name: dsrc-csharp-host-developer
-description: Develops, debugs, and verifies DSRC/RSU/OBU features in WJ_ComprehensiveTest_Desk_20260922 (WinForms, DesktopComm, lane trade). Use for new features, UI, DLL/serial, frame parsing, and pass/fail logic. Do not use for C++/MFC migration audits.
+description: Develops, debugs, and verifies DSRC/RSU/OBU features in WJ_ComprehensiveTest_Desk (WinForms, DesktopComm, lane trade). Use for new features, UI, DLL/serial, frame parsing, and pass/fail logic. Do not use for C++/MFC migration audits.
 ---
 
 # DSRC C# 上位机开发

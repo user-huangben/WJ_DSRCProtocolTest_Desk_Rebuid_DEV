@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 ## 适用范围
 
-根据当前工程已实现界面和测试流程，在 `.sln` 同级生成 `操作说明.docx`（当前为 `WJ_ComprehensiveTest_Desk_20260922/操作说明.docx`）。使用 `scripts/build_manual.py` 生成文档，截图及标注后的生成物放在 `WJ_ComprehensiveTest_Desk_20260922/artifacts/manual/`。只写代码能验证的功能，不把占位用例写成已实现。
+根据当前工程已实现界面和测试流程，在 `.sln` 同级生成 `操作说明.docx`（当前为 `WJ_ComprehensiveTest_Desk/操作说明.docx`）。使用 `scripts/build_manual.py` 生成文档，截图及标注后的生成物放在 `WJ_ComprehensiveTest_Desk/artifacts/manual/`。只写代码能验证的功能，不把占位用例写成已实现。
 
 ## 内容要求
 
@@ -44,6 +44,6 @@ disable-model-invocation: true
 
 使用 `python scripts/build_manual.py` 生成文档。写入后使用：
 
-`python scripts/render_docx.py WJ_ComprehensiveTest_Desk_20260922/操作说明.docx --output_dir WJ_ComprehensiveTest_Desk_20260922/artifacts/manual/rendered`
+`python scripts/render_docx.py WJ_ComprehensiveTest_Desk/操作说明.docx --output_dir WJ_ComprehensiveTest_Desk/artifacts/manual/rendered`
 
 将 DOCX 渲成逐页 PNG，在 100% 视图检查标题、截图、标注、表格分页、中文字体、页眉页脚和空白页。用户只要求新增 skill 时，不生成操作说明文件。
