@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace WJ_DSRCProtocolTest_Desk_Net.Native
+namespace WJ_ComprehensiveTest_Desk.Native
 {
     /// <summary>
     /// 原车道交易依赖 DLL 的最小 ABI 声明。所有入口集中在此文件，避免业务层散落 P/Invoke。

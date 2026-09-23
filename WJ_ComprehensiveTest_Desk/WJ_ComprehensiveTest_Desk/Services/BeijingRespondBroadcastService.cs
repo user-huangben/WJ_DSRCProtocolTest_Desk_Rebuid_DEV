@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 
-namespace WJ_DSRCProtocolTest_Desk_Net.Services
+namespace WJ_ComprehensiveTest_Desk.Services
 {
     /// <summary>执行旧北京地标 WJ_OneChip_RespondBroadcast 的两轮广播响应测试。</summary>
     internal sealed class BeijingRespondBroadcastService

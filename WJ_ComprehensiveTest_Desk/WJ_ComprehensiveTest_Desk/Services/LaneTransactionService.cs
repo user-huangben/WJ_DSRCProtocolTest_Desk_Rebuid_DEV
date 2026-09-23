@@ -5,7 +5,7 @@ using System.IO;
 using System.Text;
 using System.Threading;
 
-namespace WJ_DSRCProtocolTest_Desk_Net.Services
+namespace WJ_ComprehensiveTest_Desk.Services
 {
     /// <summary>
     /// 按原 OBU 模块软交易顺序执行备用测试项“车道交易测试”。

@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
-using WJ_DSRCProtocolTest_Desk_Net.Native;
+using WJ_ComprehensiveTest_Desk.Native;
 
-namespace WJ_DSRCProtocolTest_Desk_Net.Services
+namespace WJ_ComprehensiveTest_Desk.Services
 {
     internal sealed class DesktopCommService : IDisposable
     {

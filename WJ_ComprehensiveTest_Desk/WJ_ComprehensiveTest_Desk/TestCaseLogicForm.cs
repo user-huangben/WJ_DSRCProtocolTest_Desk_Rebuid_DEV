@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace WJ_DSRCProtocolTest_Desk_Net
+namespace WJ_ComprehensiveTest_Desk
 {
     /// <summary>
     /// 显示单个测试用例的测试逻辑说明；当前窗体只负责展示，不执行设备通信。

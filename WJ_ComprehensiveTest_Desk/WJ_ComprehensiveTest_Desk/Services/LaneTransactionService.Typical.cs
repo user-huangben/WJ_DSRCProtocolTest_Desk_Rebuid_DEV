@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
 
-namespace WJ_DSRCProtocolTest_Desk_Net.Services
+namespace WJ_ComprehensiveTest_Desk.Services
 {
     /// <summary>原上位机 WJ_Trade_typicaltransfer / WJ_Trade_typicaltransfer_SM4 的典型交易迁移。</summary>
     internal sealed partial class LaneTransactionService

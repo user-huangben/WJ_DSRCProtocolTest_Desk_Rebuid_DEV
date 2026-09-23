@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WJ_DSRCProtocolTest_Desk_Net.Services;
+using WJ_ComprehensiveTest_Desk.Services;
 
-namespace WJ_DSRCProtocolTest_Desk_Net.Controls
+namespace WJ_ComprehensiveTest_Desk.Controls
 {
     /// <summary>
     /// 提供与原上位机透传页对应的预置帧、帧序列编辑、文件读写、执行和上下行显示功能。

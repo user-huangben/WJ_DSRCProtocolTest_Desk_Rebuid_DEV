@@ -1,7 +1,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace WJ_DSRCProtocolTest_Desk_Net
+namespace WJ_ComprehensiveTest_Desk
 {
     partial class BeijingLocalStandardTestForm
     {

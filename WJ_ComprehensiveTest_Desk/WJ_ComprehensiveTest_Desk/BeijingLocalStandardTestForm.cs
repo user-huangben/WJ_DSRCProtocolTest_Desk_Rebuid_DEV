@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WJ_DSRCProtocolTest_Desk_Net.Services;
+using WJ_ComprehensiveTest_Desk.Services;
 
-namespace WJ_DSRCProtocolTest_Desk_Net
+namespace WJ_ComprehensiveTest_Desk
 {
     /// <summary>
     /// 承载北京地标协议测试目录、选择状态、顺序调度和后续协议用例注册入口。

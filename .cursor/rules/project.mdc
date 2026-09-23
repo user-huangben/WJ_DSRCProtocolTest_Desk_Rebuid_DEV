@@ -13,6 +13,8 @@ alwaysApply: true
 ## 变更完整性
 
 - 修改前读取目标文件的当前内容，保留不属于本次任务的用户改动。
+- 修改现行工程文件（`.cs`、Designer、`.resx`、`.csproj`，以及本次确需改动的 `.config` / `.ini`）之前，将**即将改写的文件**按原相对路径复制到源码目录 `WJ_ComprehensiveTest_Desk/WJ_ComprehensiveTest_Desk/.backups/yyyyMMdd-简短主题/`。只拷本次文件，不整目录备份，不拷 `bin/`、`obj/`、`.vs/`。新增文件无现行副本可跳过拷贝。
+- `.backups/` 只作修改前快照与说明索引，不作实现来源，不盖回现行文件。仅改 `AGENTS.md`、Rules、Skills 或说明文档时不要求快照。
 - 当前工程为非 SDK 风格项目；新增或删除 `.cs`、Designer、`.resx` 时同步维护 `.csproj` 中的 `Compile`、`DependentUpon`、`EmbeddedResource` 等项目项，不假定文件会自动纳入构建。
 
 ## 构建验证
@@ -25,7 +27,7 @@ alwaysApply: true
 
 ## 交付证据
 
-- 改代码、配置、资源、项目文件或仓库规则后更新 `WJ_ComprehensiveTest_Desk/项目文件说明.md`。
+- 改代码、配置、资源、项目文件或仓库规则后更新工作区 `E:\WJ_ComprehensiveTest_Desk` 下的 `WJ_ComprehensiveTest_Desk/项目文件说明.md`。
 - 未实编不得声称已构建通过。
 - 交付列出修改文件、已验证、未验证、仍需实机确认项。
 - 使用独立验证目录时在交付中列出实际输出路径。

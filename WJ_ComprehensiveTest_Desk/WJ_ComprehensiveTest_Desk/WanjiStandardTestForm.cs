@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-using WJ_DSRCProtocolTest_Desk_Net.Services;
+using WJ_ComprehensiveTest_Desk.Services;
 
-namespace WJ_DSRCProtocolTest_Desk_Net
+namespace WJ_ComprehensiveTest_Desk
 {
     /// <summary>
     /// 承载单个万集标准测试类别的测试项界面，并提供测试逻辑查看和结果文件记录入口。

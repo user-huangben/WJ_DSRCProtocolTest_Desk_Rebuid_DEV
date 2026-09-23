@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
 
-namespace WJ_DSRCProtocolTest_Desk_Net.Services
+namespace WJ_ComprehensiveTest_Desk.Services
 {
     /// <summary>按旧 <c>WJ_OneChip_typicaltransfer</c> 执行北京地标六分支典型交易。</summary>
     internal sealed class BeijingTypicalTransactionService

@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace WJ_DSRCProtocolTest_Desk_Net.Native
+namespace WJ_ComprehensiveTest_Desk.Native
 {
     internal static class DesktopCommNativeMethods
     {

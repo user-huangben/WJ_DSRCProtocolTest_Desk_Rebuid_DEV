@@ -4,7 +4,7 @@ using System.Globalization;
 using System.IO;
 using System.Text;
 
-namespace WJ_DSRCProtocolTest_Desk_Net.Services
+namespace WJ_ComprehensiveTest_Desk.Services
 {
     /// <summary>
     /// 将测试用例的最终结果和完整空中交互帧保存到 exe 同级的 TestResults 目录。

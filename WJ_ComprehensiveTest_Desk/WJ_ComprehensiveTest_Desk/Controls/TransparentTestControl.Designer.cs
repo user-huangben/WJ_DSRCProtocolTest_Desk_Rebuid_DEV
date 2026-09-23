@@ -1,4 +1,4 @@
-namespace WJ_DSRCProtocolTest_Desk_Net.Controls
+namespace WJ_ComprehensiveTest_Desk.Controls
 {
     partial class TransparentTestControl
     {

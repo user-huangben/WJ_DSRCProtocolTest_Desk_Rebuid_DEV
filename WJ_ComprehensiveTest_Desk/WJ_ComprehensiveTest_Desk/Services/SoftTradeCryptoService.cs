@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using System.Security.Cryptography;
 
-namespace WJ_DSRCProtocolTest_Desk_Net.Services
+namespace WJ_ComprehensiveTest_Desk.Services
 {
     /// <summary>
     /// 原上位机“软交易”算法选择。

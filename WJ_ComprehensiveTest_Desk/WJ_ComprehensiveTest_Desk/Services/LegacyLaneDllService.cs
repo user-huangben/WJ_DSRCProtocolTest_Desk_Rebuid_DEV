@@ -2,9 +2,9 @@ using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Text;
-using WJ_DSRCProtocolTest_Desk_Net.Native;
+using WJ_ComprehensiveTest_Desk.Native;
 
-namespace WJ_DSRCProtocolTest_Desk_Net.Services
+namespace WJ_ComprehensiveTest_Desk.Services
 {
     /// <summary>
     /// 对车道交易使用的三个用户 DLL 做依赖验证，并封装原上位机使用的 3DES/MAC 算法。

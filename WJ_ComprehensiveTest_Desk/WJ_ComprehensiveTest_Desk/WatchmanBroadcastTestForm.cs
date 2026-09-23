@@ -1,6 +1,6 @@
 using System; using System.Collections.Generic; using System.Threading; using System.Threading.Tasks; using System.Windows.Forms;
 
-namespace WJ_DSRCProtocolTest_Desk_Net
+namespace WJ_ComprehensiveTest_Desk
 {
     /// <summary>
     /// 承载守望者播报测试的独立测试大框；具体测试项保留给后续需求实现。

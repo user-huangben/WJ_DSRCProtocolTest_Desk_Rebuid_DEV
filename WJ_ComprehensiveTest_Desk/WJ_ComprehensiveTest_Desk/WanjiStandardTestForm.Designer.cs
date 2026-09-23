@@ -1,4 +1,4 @@
-namespace WJ_DSRCProtocolTest_Desk_Net
+namespace WJ_ComprehensiveTest_Desk
 {
     partial class WanjiStandardTestForm
     {

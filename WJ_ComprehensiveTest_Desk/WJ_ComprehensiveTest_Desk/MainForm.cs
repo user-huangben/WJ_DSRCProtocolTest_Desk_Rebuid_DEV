@@ -5,9 +5,9 @@ using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Windows.Forms;
-using WJ_DSRCProtocolTest_Desk_Net.Services;
+using WJ_ComprehensiveTest_Desk.Services;
 
-namespace WJ_DSRCProtocolTest_Desk_Net
+namespace WJ_ComprehensiveTest_Desk
 {
     public partial class MainForm : Form
     {
@@ -25,28 +25,16 @@ namespace WJ_DSRCProtocolTest_Desk_Net
             transparentTestControl.AttachService(_desktopCommService);
         }
 
-        /// <summary>绘制三个一级产品页签的场景颜色和选中状态。</summary>
+        /// <summary>绘制一级产品页签：未选中灰色，当前页白色，标题使用较小字号。</summary>
         /// <param name="sender">Designer 绑定的一级产品页签控件。</param>
         /// <param name="e">包含待绘制页签边界和选中状态的事件数据。</param>
         private void tabControlProducts_DrawItem(object sender, DrawItemEventArgs e)
         {
-            Color[] normalColors =
-            {
-                Color.FromArgb(220, 230, 242),
-                Color.FromArgb(220, 238, 221),
-                Color.FromArgb(247, 228, 204)
-            };
-            Color[] selectedColors =
-            {
-                Color.FromArgb(47, 111, 178),
-                Color.FromArgb(67, 140, 91),
-                Color.FromArgb(181, 107, 44)
-            };
             bool isSelected = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
-            Color background = isSelected ? selectedColors[e.Index] : normalColors[e.Index];
+            Color background = isSelected ? Color.White : Color.FromArgb(210, 210, 210);
             Rectangle bounds = e.Bounds;
             using (SolidBrush backgroundBrush = new SolidBrush(background))
-            using (SolidBrush textBrush = new SolidBrush(isSelected ? Color.White : Color.FromArgb(55, 65, 81)))
+            using (SolidBrush textBrush = new SolidBrush(Color.FromArgb(55, 65, 81)))
             using (StringFormat format = new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center })
             {
                 e.Graphics.FillRectangle(backgroundBrush, bounds);

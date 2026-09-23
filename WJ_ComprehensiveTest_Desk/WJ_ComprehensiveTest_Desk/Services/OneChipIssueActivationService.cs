@@ -5,7 +5,7 @@ using System.IO;
 using System.Text;
 using System.Threading;
 
-namespace WJ_DSRCProtocolTest_Desk_Net.Services
+namespace WJ_ComprehensiveTest_Desk.Services
 {
     /// <summary>
     /// 按旧单片式上位机的固定SM4根密钥、SetMe.ini数据源和5.8G TransferChannel顺序执行二次发行与标签激活。

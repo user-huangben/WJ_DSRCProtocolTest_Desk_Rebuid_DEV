@@ -5,21 +5,6 @@ description: Develops, debugs, and verifies DSRC/RSU/OBU features in WJ_Comprehe
 
 # DSRC C# 上位机开发
 
-## 适用范围
-
-约束见 `AGENTS.md` 与 `.cursor/rules/`。本 skill 只定开发顺序。涉及协议、设备 DLL、测试流程、测试判定或结果文件时，用户确认计划前不得改业务代码、Designer、配置或项目文件。
-
-### 路由
-
-- 「移植 / 迁移 / 按旧上位机复现 / 对照旧日志」→ `dsrc-csharp-host-migration`。
-- 现有 C# 新功能、重构、界面、DLL 排障、已证实流程修复 → 本 skill。
-
-## 输入与落点
-
-- 窗体：`MainForm`；OBU 标准 `WanjiStandardTestForm` + `WanjiStandardTestCaseHandlers`；北京地标 / CPC / 守望者对应 Form；布局 `TransparentTestControl`。
-- 空口：`DesktopCommService` + `Native/DesktopCommNativeMethods`（`DeskTopComm.dll`）。车道/软算：`LaneTransactionService`、`SoftTradeCryptoService`。读卡器：`LegacyLaneDllService`。北京应答：`BeijingRespondBroadcastService`、`BeijingRespondDifferentMacService`。
-- 配置：项目内 `SetMe.ini`、`BST_Locked.ini`、`BST_Locked_Sutong.ini`。结果：`TestResultFileWriter`、`TestResultScreenshotWriter`。
-
 ## 工作流程
 
 ### 第一阶段：需求分析与开发计划

@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WJ_DSRCProtocolTest_Desk_Net.Services;
+using WJ_ComprehensiveTest_Desk.Services;
 
-namespace WJ_DSRCProtocolTest_Desk_Net
+namespace WJ_ComprehensiveTest_Desk
 {
     partial class WanjiStandardTestForm
     {

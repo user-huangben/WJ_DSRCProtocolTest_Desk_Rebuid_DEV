@@ -1,29 +1,40 @@
 ---
-description: 现行 C# WinForms 工程的界面分层、测试执行、文件编码和 DSRC 判定规范
+description: 现行 WJ_ComprehensiveTest_Desk 源码工程：技术基线、输入、开发、输出、开发参考
 globs: WJ_ComprehensiveTest_Desk/WJ_ComprehensiveTest_Desk/**/*.cs,WJ_ComprehensiveTest_Desk/WJ_ComprehensiveTest_Desk/**/*.resx,WJ_ComprehensiveTest_Desk/WJ_ComprehensiveTest_Desk/**/*.csproj,WJ_ComprehensiveTest_Desk/WJ_ComprehensiveTest_Desk/**/*.config,WJ_ComprehensiveTest_Desk/WJ_ComprehensiveTest_Desk/**/*.ini
 alwaysApply: false
 ---
 
 # C# WinForms DSRC 开发规范
 
-## 界面分层与事件
+## 技术基线
+
+- 新代码和依赖必须与 .NET Framework 4.8、WinForms、x86 兼容，不使用仅适用于 .NET Core 或 .NET 5+ 的 API。
+- 不通过修改平台位数规避原生 DLL 加载错误。未经确认不得把 `PlatformTarget` 改为 AnyCPU 或 x64。
+
+## 输入
+
+- 运行参数只从 exe 同级已复制的 `SetMe.ini`、`BST_Locked.ini`、`BST_Locked_Sutong.ini` 读取；空口只经 `DeskTopComm.dll`。不擅自移动、替换或重编码这些文件。
+- 动态字段（LLC/MACID/BID/UnixTime/序号/算法/金额）只从本用例已确认来源取值，不跨用例套用模板。
+- 缺 ABI、帧字段、长度或算法时先问，禁止用相邻用例或常见 ETC 习惯补全。
+- 改历史 `.cs` / `.resx` / 项目文件保持原编码与 BOM。乱码或 eSafeNet 头用 `rg -a` 复核。非必要不手改 `.resx`。`.backups/`、`bin/`、`obj/` 不作实现来源，不盖回现行文件。
+
+## 开发
 
 - 布局与事件绑定只在 `*.Designer.cs` 的 `InitializeComponent`。后置文件：校验、UI 状态、调用服务。协议/DLL/结果文件只进 `Services/`；P/Invoke 只进 `Native/`。
 - 交互控件：Designer 加控件 → 显式绑定 `buttonName_Click` 这类标准名 → 后置写处理函数 → 调服务 → 设计器双击确认跳到已有事件。禁止反射、`Application.Idle`、Load 后 Lambda 隐式绑事件。
 - 新方法/P/Invoke 写 XML 注释（参数、返回、句柄、超时、线程）；未知标待确认。调服务或 DLL 前加一行说明该入口作用。
+- 测试大框根布局 `TableLayoutPanel`。树：分组 → 子项 → 叶子；父勾选递归；按显示顺序跑已勾选叶子；无选择不发设备通信。开始：禁用测试、启用停止、统一取消令牌。双击只出说明。清空只清日志。改过的台发/信道/自动更新在结束（含失败、取消）时恢复。
+- 先存完整下行/回复/DLL 码/时间再解析。区分 DLL 成功、收到回复、APDU `90 00`、整例通过。多 APDU 按边界切，长度字节不当正文。常规有应答以 `90 00` 为成功；刻意异常须在本用例声明。`EventReport` 只发不收、不造响应；无后续会话时以此结束空口流程。
 
-## 测试执行与结果
+## 输出
 
-- 根布局 `TableLayoutPanel`。树：分组 → 子项 → 叶子；父勾选递归；按显示顺序跑已勾选叶子；无选择不发设备通信。
-- 开始：禁用测试、启用停止、统一取消令牌。双击只出说明。清空只清日志。
-- 界面：摘要/步骤/进度/失败原因/结论/结果路径。完整帧与返回码进结果文件。单叶子截图；批量只在全部结束后汇总截图。
+- 测试信息区只写摘要、步骤、进度、失败原因、结论和结果路径。非 `90 00`（如 `93 02`）须写清期望、实际和完整异常帧。
+- 完整帧与 DLL 返回码写入结果文件，不堆在界面。`EventReport` 只记发送返回码。
+- 单叶子截图；批量只在全部结束后汇总截图。未勾选存储则不生成结果目录。
+- DLL 未就绪、无回复、长度异常、取消、结果写入失败都必须给出明确失败结论，不得当成通过。
 
-## 文件与编码保护
+## 开发参考
 
-- 改历史 `.cs` / `.resx` / 项目文件保持原编码与 BOM。乱码或 eSafeNet 头用 `rg -a` 复核。非必要不手改 `.resx`。不把 `.backups/` 盖回现行文件。
-
-## DSRC 记录与判定
-
-- 先存完整下行/回复/DLL 码/时间再解析。区分 DLL 成功、收到回复、APDU `90 00`、整例通过。多 APDU 按边界切，长度字节不当正文。
-- LLC/MACID/BID/UnixTime/序号/算法按该用例配置，不跨用例套用。非 `90 00`（如 `93 02`）在测试信息区写清期望/实际和完整异常帧。
-- `EventReport` 只发、只记发送返回码；不收、不造响应。无后续会话时以此结束空口流程。
+- 新做含车道/扣费交易流程的用例，先对照万集 OBU「备用测试项 > 1、车道交易测试」：调度 `WanjiStandardTestForm` / `WanjiStandardTestCaseHandlers.RunLaneTransactionTest`，组帧与判定 `LaneTransactionService`，软算 MAC1 `SoftTradeCryptoService`。只复用分层（窗体调度、可取消后台、INI 金额、软算、单向 EventReport、结果文件），不套用该入口的帧模板或动态字段。
+- 北京地标「典型交易」走 `BeijingTypicalTransactionService`，与通用车道交易的 GetSecure/间隔/分支不同，不能互相当默认实现。
+- 协议字段、卡文件定义以开发/迁移 Skill 中的送检指南和用户卡/ESAM 资料为准；文档、DLL 与实机冲突时保留原始数据并报告，不自行解释未知字段。

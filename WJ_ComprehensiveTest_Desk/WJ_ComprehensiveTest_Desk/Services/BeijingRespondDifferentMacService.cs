@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 
-namespace WJ_DSRCProtocolTest_Desk_Net.Services
+namespace WJ_ComprehensiveTest_Desk.Services
 {
     /// <summary>执行旧北京地标 WJ_OneChip_RespondDiffMac 的单个错误 MAC 子测试。</summary>
     internal sealed class BeijingRespondDifferentMacService

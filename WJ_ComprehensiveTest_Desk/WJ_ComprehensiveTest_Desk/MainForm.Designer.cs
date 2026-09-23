@@ -1,4 +1,4 @@
-namespace WJ_DSRCProtocolTest_Desk_Net
+namespace WJ_ComprehensiveTest_Desk
 {
     partial class MainForm
     {
@@ -48,7 +48,7 @@ namespace WJ_DSRCProtocolTest_Desk_Net
         private System.Windows.Forms.TabPage tabPageTransparentMode;
         private System.Windows.Forms.TabPage tabPageWanjiStandard;
         private System.Windows.Forms.TabPage tabPageDailyUse;
-        private global::WJ_DSRCProtocolTest_Desk_Net.Controls.TransparentTestControl transparentTestControl;
+        private global::WJ_ComprehensiveTest_Desk.Controls.TransparentTestControl transparentTestControl;
         private System.Windows.Forms.TableLayoutPanel tableLayoutWanjiCategories;
         private System.Windows.Forms.Button buttonWanjiObuStandard;
         private System.Windows.Forms.Button buttonBeijingLocalStandard;
@@ -128,7 +128,7 @@ namespace WJ_DSRCProtocolTest_Desk_Net
             this.panelWorkspace = new System.Windows.Forms.Panel();
             this.tabControlModules = new System.Windows.Forms.TabControl();
             this.tabPageTransparentMode = new System.Windows.Forms.TabPage();
-            this.transparentTestControl = new WJ_DSRCProtocolTest_Desk_Net.Controls.TransparentTestControl();
+            this.transparentTestControl = new WJ_ComprehensiveTest_Desk.Controls.TransparentTestControl();
             this.tabPageWanjiStandard = new System.Windows.Forms.TabPage();
             this.tableLayoutWanjiCategories = new System.Windows.Forms.TableLayoutPanel();
             this.buttonWanjiObuStandard = new System.Windows.Forms.Button();
@@ -169,9 +169,10 @@ namespace WJ_DSRCProtocolTest_Desk_Net
             this.tabControlProducts.Controls.Add(this.tabPageObuSerialProduct);
             this.tabControlProducts.Controls.Add(this.tabPageCreateCardProduct);
             this.tabControlProducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
             this.tabControlProducts.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabControlProducts.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
-            this.tabControlProducts.ItemSize = new System.Drawing.Size(145, 28);
+            this.tabControlProducts.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F);
+            this.tabControlProducts.ItemSize = new System.Drawing.Size(145, 24);
             this.tabControlProducts.Location = new System.Drawing.Point(0, 0);
             this.tabControlProducts.Name = "tabControlProducts";
             this.tabControlProducts.SelectedIndex = 0;
@@ -188,8 +189,9 @@ namespace WJ_DSRCProtocolTest_Desk_Net
             this.tabPageDsrcProduct.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageDsrcProduct.Size = new System.Drawing.Size(1272, 727);
             this.tabPageDsrcProduct.TabIndex = 0;
+            this.tabPageDsrcProduct.BackColor = System.Drawing.Color.White;
             this.tabPageDsrcProduct.Text = "WJ_DSRC_Protocol_test";
-            this.tabPageDsrcProduct.UseVisualStyleBackColor = true;
+            this.tabPageDsrcProduct.UseVisualStyleBackColor = false;
             // 
             // tabPageObuSerialProduct
             // 
@@ -199,8 +201,9 @@ namespace WJ_DSRCProtocolTest_Desk_Net
             this.tabPageObuSerialProduct.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageObuSerialProduct.Size = new System.Drawing.Size(1272, 727);
             this.tabPageObuSerialProduct.TabIndex = 1;
+            this.tabPageObuSerialProduct.BackColor = System.Drawing.Color.White;
             this.tabPageObuSerialProduct.Text = "WJ_OBUSerial_Desk";
-            this.tabPageObuSerialProduct.UseVisualStyleBackColor = true;
+            this.tabPageObuSerialProduct.UseVisualStyleBackColor = false;
             // 
             // labelObuSerialPlaceholder
             // 
@@ -219,8 +222,9 @@ namespace WJ_DSRCProtocolTest_Desk_Net
             this.tabPageCreateCardProduct.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageCreateCardProduct.Size = new System.Drawing.Size(1272, 727);
             this.tabPageCreateCardProduct.TabIndex = 2;
+            this.tabPageCreateCardProduct.BackColor = System.Drawing.Color.White;
             this.tabPageCreateCardProduct.Text = "WJ_CreatCard_Desk";
-            this.tabPageCreateCardProduct.UseVisualStyleBackColor = true;
+            this.tabPageCreateCardProduct.UseVisualStyleBackColor = false;
             // 
             // labelCreateCardPlaceholder
             // 
